@@ -1,0 +1,42 @@
+.breadcrumb {
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .breadcrumb__link--active {
+    color: @color-default-black;
+  }
+
+  &__item:not(:last-child)::after {
+    display: block;
+    width: 6px;
+    height: 13px;
+    margin-left: 12px;
+    background-image: url("../img/svg/icon-defis.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+  }
+
+
+  a {
+    color: @color-nobel;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    font-style: normal;
+  }
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+
+  :hover {
+    color: @color-default-black;
+  }
+}

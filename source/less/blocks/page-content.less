@@ -1,0 +1,39 @@
+.page-content {
+  &__breadcrumb {
+    margin: 50px 0 50px 0;
+
+    @media (max-width: @vp-767) {
+      margin: 40px 0 30px 0;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  &__account {
+    margin: 15px 0 30px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  &__account-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: @color-nobel;
+    border-bottom: 1px solid @color-nobel;
+
+    &:hover {
+      color: @color-default-black;
+      border-bottom: 1px solid @color-default-black;
+    }
+  }
+}

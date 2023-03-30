@@ -1,0 +1,119 @@
+.header {
+  margin-top: 20px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1110px;
+    position: relative;
+    justify-content: space-between;
+
+    @media (max-width: @vp-1023) {
+      position: relative;
+    }
+  }
+
+  &__main-nav {
+    order: 4;
+  }
+
+  &__logo {
+    position: absolute;
+    content: "";
+    left: 475px;
+    top: 77px;
+
+    @media (max-width: @vp-1023) {
+      position: static;
+      text-align: center;
+      height: 24px;
+      padding-top: 15px;
+      margin-right: 34px;
+    }
+  }
+
+  &__logo-icon {
+    @media (max-width: @vp-1023) {
+      width: 77px;
+      height: 24px;
+
+      svg {
+        width: 77px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    padding-top: 11px;
+  }
+}
+
+.header__toggle {
+  display: none;
+
+  @media (max-width: @vp-1023) {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  &--closed {
+    &::before {
+      @media (max-width: @vp-1023) {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: 2px;
+        background-color: @color-default-black;
+        box-shadow: 0 10px 0 0 @color-default-black, 0 20px 0 0 @color-default-black;
+      }
+    }
+  }
+
+  &--opened {
+    &::after,
+    &::before {
+      @media (max-width: @vp-1023) {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 28px;
+        height: 2px;
+        background-color: @color-default-black;
+        box-shadow: none;
+      }
+    }
+
+    &::before {
+      @media (max-width: @vp-1023) {
+        transform: rotate(45deg);
+      }
+    }
+
+    &::after {
+      @media (max-width: @vp-1023) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &--nojs {
+    display: none;
+  }
+}

@@ -1,0 +1,145 @@
+.data {
+  display: grid;
+  grid-template-columns: 1fr;
+  // max-width: 505px;
+  align-items: left;
+  margin-bottom: 70px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    position: relative;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 505px;
+    column-gap: 35px;
+  }
+
+  &__name,
+  &__phone {
+    max-width: 235px;
+  }
+
+  &__map {
+    position: absolute;
+    top: -110px;
+    right: 0;
+
+    @media (max-width: @vp-767) {
+      position: static;
+    }
+  }
+
+  &__value {
+    font-family: @font-helvetica;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: @color-default-black;
+    border: none;
+    outline: 0;
+    width: 100%;
+    padding: 15px 0 9px 0;
+    border-bottom: 1px solid @color-nobel;
+  }
+
+  &__value--active {
+    padding: 5px 0 7px 0;
+  }
+
+  &__type-list--active {
+    padding: 5px 0 7px 0;
+  }
+
+  &__type-list {
+    font-family: @font-helvetica;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: @color-nobel;
+    border: 1px solid @color-nobel;
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+
+  &__type-item {
+    margin: 20px 0 20px 20px;
+
+    &:focus,
+    &:active,
+    &:hover {
+      cursor: pointer;
+      color: @color-default-black;
+    }
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__label--active {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 0;
+    color: @color-nobel;
+  }
+
+  &__conteiner {
+    margin-top: 68px;
+  }
+
+  &__button {
+    margin-top: 10px;
+  }
+
+  &__button-send {
+    width: 505px;
+    height: 70px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    padding: 24px 217px;
+
+    &:hover {
+      background-color: @color-default-black;
+      color: @color-default-white;
+      border: none;
+    }
+  }
+}
+
+.data__name,
+.data__address,
+.data__phone,
+.data__mail,
+.data__comment,
+.data__type {
+  max-width: 505px;
+  min-height: 46px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: @color-nobel;
+}
+
+.data__type-value {
+  background-image: url("../img/svg/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.3em top 65%, 0 0;
+  background-size: 16px 9px;
+}
+
+.data__type-value--open {
+  transform: rotate(180deg);
+}
+

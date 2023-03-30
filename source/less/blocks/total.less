@@ -1,0 +1,33 @@
+.total {
+  &__wrapper {
+    width: 555px;
+    height: 136px;
+    background-color: @color-default-black;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // position: absolute;
+    // top: 836px;
+    // left: 50%;
+
+    @media (max-width: @vp-767) {
+      display: none;
+    }
+  }
+
+  &__text,
+  &__sum {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    color: @color-default-white;
+    margin: 0 30px;
+  }
+
+  &__sum {
+    span {
+      margin-right: 10px;
+    }
+  }
+}
