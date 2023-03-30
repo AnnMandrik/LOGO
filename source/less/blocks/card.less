@@ -1,0 +1,134 @@
+.card {
+  &__title {
+    font-family: @font-helvetica;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    margin: 0 0 30px 0;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    max-width: 506px;
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+  }
+
+  &__item {
+    border-bottom: 1px solid @color-gainsboro;
+    margin-bottom: 26px;
+    padding: 0 35px 20px 0;
+    display: flex;
+    height: 100%;
+  }
+
+  &__image-wrapper {
+    min-width: 150px;
+    min-height: 150px;
+    margin: 0 20px 0 0;
+  }
+
+  &__main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 180px;
+    margin: 0 30px 0 0;
+  }
+
+  &__title-card {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0 0 10px 0;
+  }
+
+  &__description {
+    width: 150px;
+    height: auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: @color-nobel;
+  }
+
+  &__counter {
+    margin-top: 20px;
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: center;
+    height: 40px;
+    width: 114px;
+    border: 1px solid @color-default-black;
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 100%;
+    padding: 0;
+    font-size: 20px;
+    color: @color-default-black;
+    border: 0;
+    background: 0 0;
+    cursor: pointer;
+    transition: color @trans-default, outline-color @trans-default;
+  }
+
+  &__input {
+    display: flex;
+    width: 24px;
+    height: 100%;
+    padding: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    border: 0;
+    -webkit-transition: color @trans-default, outline-color @trans-default;
+    transition: color @trans-default, outline-color @trans-default;
+    text-align: center;
+  }
+
+  &__cost {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 110px;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+}
+
+.card__link {
+  max-width: 56px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: @color-nobel;
+  border-bottom: 1px solid @color-nobel;
+  margin-left: 36px;
+
+  &:hover {
+    color: @color-default-black;
+    border-bottom: 1px solid @color-default-black;
+  }
+}
+
+.card__list li:last-child {
+  margin-bottom: 0;
+  border: 0;
+}
